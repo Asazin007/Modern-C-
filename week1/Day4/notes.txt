@@ -1,0 +1,15 @@
+ptr [0X100H]
+    0X11H
+
+name=ptr
+content =0X100H
+size =8 bytes
+address = 0X11H
+
+
+---------------smart pointers----------------
+1) Unique pointers (cant make copy)
+2) shared pointers
+3) weak pointers (token which can convert to shared ptr)
+
+RAII(Resourse Aquisition is Initialization): initialize in constructor and delocate in destructor

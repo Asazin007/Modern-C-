@@ -1,0 +1,2 @@
+create a banking system where i can record customer details, account details, card details and cheque details account may have sub categories
+expected operations are : ability to create new account, find details of an account based on id, calculate min, max, total, avg bank balance and return details of cheque using cheque id

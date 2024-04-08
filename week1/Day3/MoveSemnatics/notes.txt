@@ -1,0 +1,58 @@
+os
+dbms
+computer network
+computer architecture
+
+Move Semantics-
+-vector has 3 values jn stack , add to begin , add to end , add to last capacity
+-we only copy those values without copy my data , that is is move Semantics
+
+int n =10
+4 tokens
+int (specifier)
+n (identifier, lvalue)
+= (assignment operator)
+10(rvalue)                  
+lvalue = has name and memory location
+rvalue = has not no name + memory
+
+
+-----------------------------------------------------------------------------------------------------------
+void magic (std::vector <int> val)
+Main(){
+    Magic(...);
+}
+
+scenario 1: Design the function to accept lvalue and rvalue both. Allow copy of lvalue and assignment of rvalue
+ex:
+MAgic(std::vector<int> {1,2,3,4,5});
+ex:
+std:: vector<int> v1{1,2,3,4,5};
+Magic(v1);// vector makes copy of data in heap
+
+scenario 2: lvalue to be accepted by reference.
+No rvalue (temp, no ownership transfer)
+NO copy of data
+
+ex: void (std::vector<int> & data);
+
+Main-
+    std:: vector <int> v1{1,2,3,4,5};
+    Magic (v1);
+    Magic(std:: vector <int> {1,2,3,4,5})// compile time error 
+
+scenario 3:I only want a single copy of data
+ I only want rvalue so that user can not create a duplicate copy of data in the main function
+
+ void Magic (std:: vector<int> && val);
+ ex:
+ Magic(std::move(v1));
+ or 
+ Magic(std::vector<int> {1,2,3,4,5});
+ Magic(v1)// compile time error
+ scenario 4: I want to design a function where , lvalue are accepted by reference , also want rvalue to be accepted by assignment
+ void Magic(const std:: vector <int>& val);  
+ex:
+Magic(v1);
+Maigic(std:: vector<int> {1,2,3,4,5});//okay!!!!
+Magic(std::vector(v1)); //by reference .OKAY!!

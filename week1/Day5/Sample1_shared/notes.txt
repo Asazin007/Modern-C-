@@ -1,0 +1,29 @@
+errors--------------------------------
+//objdump -Cd ./app
+//g++ -E demo.cpp > output
+
+
+1) #undefined reference to <function-name>
+    -The function definition does not exits
+
+2)<identifier> not declared in scope
+
+    -Func name being does not appear in declared symbol
+    -variable declared does not appear in avalable names
+    -error is due to spelling mistakes
+
+3) redefination of class
+   -not used header guard
+   -multiple defination of a class in a file
+
+4)Too few args error
+    -less args than required
+
+5)too many args error
+   -more agrs than required
+
+6) type mismatch of a func parameter
+
+7) no matching function for call
+    
+

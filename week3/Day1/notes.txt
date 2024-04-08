@@ -1,0 +1,88 @@
+1)what are we doing
+-we are trying to do more work in our work to increse efficieny in the program
+
+2)How?
+- By using the os for support , we are requesting os to run indepenence section of my program =(parll)
+or concurrency if not work out
+
+3) Syntax wise what to do?
+
+- Each of your independent function an be treated  "logical threads . THey can be scheduled by os if you create a thread 
+object and attach it to object  and attach to a callable with right parameter
+
+- Also remember to wait for threads to finish
+|   |  |  or
+DETACH FROM SPAWNED threads
+
+4)Whydid you join thread?
+
+-Because main thread cannot finish before other threads as spawned threads need to report back to main via
+signals. If main is already finished , then thread has to become daemon thread(a thread running in the background)
+.
+
+5) What is std::thread?
+- it is a class ehich is a wrapper around a native platform specific OS- level thread.
+
+6) Can we copy thread?
+- No, Because once a thread is started, copying it would mean duplicating and doing the same thing agaun.
+-in middle of excecution of a thread what will you copy halfway
+
+7) Can we make container of threads?
+- yes, coz we make instances of threads
+
+8) What is a race condition?
+- 2 or more threads are finghting TO PERFORM A WRITE OPERATION ON A SHARED MEMORY
+
+
+9) What is a critical  section?
+- A part of program where race condition can happeN
+
+10) how to avoid race condition? 
+- Take action to synchronize threads ESPECIALLY FOR CRITICAL SECTIONS
+
+11)syntactically , how to do this?
+- choose btw the plethora (too many) of the available choices for the synchronization primitived
+
+- mutex: a binary semaphore which needs to locked / unlocked manually
+
+- lock_guard : which is a scope based lock that uses RAII 
+
+- unique_lock : it can locked /unlocked manually as well with RAII rules
+-
+- recursive lock: if you want to use recursion and thread
+
+-condition variable:  To implememnt synchronization based on PRODUCER/CONSUMER model.
+
+12)How will i know which one to use ?
+common sense
+
+13) how will i learn all this?
+-ccpcon and concurrency in action book\
+
+14) All this sounds like os level stuff, why learn?
+- all devloper needs harsdware efficieny
+
+15)  What is synchronous and asyncrhronous stuff?
+- if you start command / instruction  N only after command/instruction N-1 IF FULLY COMPLETED, execution is synchronous else asyncrhronous
+
+16) Is async the same have learnt in javacript / and / or other language?
+-yes , of course!
+
+17) What if I dont understand all this before the marathon?
+-well...
+- I heard TCS is still hiring
+
+problem:
+try
+{
+    /* code */
+     std::lock_guard<std::mutex> lk(mt);
+    amount-=10;
+    performActionAfterModificaation();
+   
+}
+catch(const std::exception& e)
+{
+    std::cerr << e.what() << '\n';
+}
+

@@ -1,0 +1,24 @@
+/* ------------------------------STACK-------------------------
+A situation where only ine element needs to be accessed and its is the most recent item inserted into container
+
+eg = A compiler executing functions calls
+
+f1(){
+    f2()
+}
+call stack;
+
+f2->>will be accesed first
+f1---> is after
+
+
+For each loop will not work
+ */
+
+ step 1 : always relaton btw N( no of input ) and operation.
+ - in linerar seach operation is "accese element and compare".
+ - in binary search, check middle, if found , okay, else divide
+ 
+ //priority queue and unordered set
+
+ 

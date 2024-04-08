@@ -1,0 +1,51 @@
+#include<iostream>
+/*
+object represnt a state of class
+*/
+class TrainingSession
+{
+private:
+    /* data */
+    // int _duration;
+    // unsigned int _student;
+    // std::string _trianername;
+    // std::string _session_topic;
+    // DateTime _date 
+public:
+    TrainingSession(/* args */) {}
+    ~TrainingSession() {}
+};
+
+class TrainingBatch
+{
+private:
+    /* data 
+    _id :ID
+    _strenght : unsighned int
+    _trainer_name :Employee
+    TrainingSession 
+    _pmt_coordinate :Employee    
+    _date: DateTIme
+    _telents: Container<Talents>
+    */
+public:
+    TrainingBatch(/* args */) {}
+    ~TrainingBatch() {
+
+
+
+    }
+    class ID {
+/*
+    _country : COUNTRY
+    _year : 24
+    _month : 01
+    _track_level : LEVEL
+    _batch_number : 01
+    _location : optional
+    _track_name : Track
+    _talents : Container<Talent>
+ 
+*/
+};
+};

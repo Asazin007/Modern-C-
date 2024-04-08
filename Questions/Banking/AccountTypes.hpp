@@ -1,0 +1,12 @@
+#ifndef ACCOUNTTYPES_HPP
+#define ACCOUNTTYPES_HPP
+
+enum class AccountTypes
+{
+    SAVINGS_ACCOUNT,
+    CURRENT_ACCOUNT,
+    SALARY_ACCOUNT,
+    NRI_ACCOUNT
+};
+
+#endif // ACCOUNTTYPES_HPP

@@ -1,0 +1,9 @@
+Command line(basic)
+
+Git version
+
+MakeFiles and CMake
+                            
+Great Understanding of OOP!
+
+-Effective Modern CPP (before april)

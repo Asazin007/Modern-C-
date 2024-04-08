@@ -1,0 +1,54 @@
+
+Algorithms covered:
+
+1) `std::count_if`: This algorithm counts the number of elements in a range that satisfy a specific condition, which is defined by a unary predicate.
+
+2) `std::find_if`: It searches for an element in a range that satisfies a specified condition, defined by a unary predicate. It returns an iterator to the first occurrence of such an element, or the end iterator if not found.
+
+3) `std::any_of`: This algorithm checks if any element in a range satisfies a specified condition, again defined by a unary predicate. It returns true if at least one element satisfies the condition, otherwise false.
+
+4) `std::all_of`: Similar to `std::any_of`, but it checks if all elements in a range satisfy the specified condition. It returns true if all elements satisfy the condition, otherwise false.
+
+5) `std::none_of`: Opposite to `std::any_of`, this algorithm checks if none of the elements in a range satisfy the specified condition. It returns true if none of the elements satisfy the condition, otherwise false.
+
+6) `std::copy`: Copies elements from a source range to a destination range. It accepts input iterators denoting the range to copy from and output iterator denoting the destination where elements are copied.
+
+7) `std::copy_if`: Copies elements from a source range to a destination range, but only copies those elements that satisfy a specified condition, defined by a unary predicate.
+
+8) `std::accumulate`: This algorithm calculates the sum of elements in a range or a custom accumulation operation can be specified. It starts with an initial value and iteratively combines it with each element in the range using a specified binary operation.
+
+9) `std::max_element`: Finds the largest element in a range and returns an iterator to it. If multiple elements have the maximum value, it returns the iterator to the first occurrence of such an element.
+
+10) `std::min_element`: Similar to `std::max_element`, but it finds the smallest element in a range and returns an iterator to it. If multiple elements have the minimum value, it returns the iterator to the first occurrence of such an element.
+
+11)`std::distance calculates the number of elements between two iterators in a sequence. It takes two iterators as arguments and returns the number of elements between them. This`
+These algorithms provide powerful tools for working with sequences of elements in C++.
+
+
+------------other Algos--------------------------------
+Sure, here are a few more commonly used algorithms in C++'s Standard Library:
+
+11) `std::sort`: This algorithm sorts the elements in a range in ascending order. It accepts two iterators denoting the range to be sorted and optionally a comparison function to define the sorting order.
+
+12) `std::binary_search`: It checks whether an element exists in a sorted range. It returns true if the element is found, otherwise false.
+
+13) `std::reverse`: This algorithm reverses the order of elements in a range. It accepts two iterators denoting the range to be reversed.
+
+14) `std::fill`: It assigns the specified value to all elements in the given range.
+
+15) `std::fill_n`: Similar to `std::fill`, but it assigns the specified value to the first n elements in a sequence starting from a given iterator.
+
+16) `std::rotate`: This algorithm rotates the elements in a range such that the element at a specified position becomes the new first element. 
+
+17) `std::unique`: It removes consecutive duplicate elements from a range. It returns an iterator to the end of the resulting range after removing duplicates.
+
+18) `std::lower_bound`: It returns an iterator pointing to the first element in a sorted range that is not less than the specified value.
+
+19) `std::upper_bound`: Similar to `std::lower_bound`, but it returns an iterator pointing to the first element in a sorted range that is greater than the specified value.
+
+20) `std::next_permutation`: This algorithm generates the next lexicographically greater permutation of a sequence. It modifies the input sequence to the next permutation in lexicographical order.
+
+These algorithms provide a wide range of functionalities for manipulating and working with sequences and containers in C++.
+
+
+

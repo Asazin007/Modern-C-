@@ -1,0 +1,65 @@
+seguay : A smooth transition
+
+[ 101 | "Rohan" | 87000.0f | "Devloper" ]
+
+[ 102 | "Ajay" | 7000.0f | "Tester" ]
+
+Tag                 Data
+[ 809 ] ->   [ 103 | "Rohan" | 77000.0f | "Trainer" ]
+
+key               value
+
+Option 1: store objs in fixed sizzed containers with contiguous storage
+benefits : 1) Random access
+            2)easy to find next or privious data
+            3)no tension  of resize or change in length
+Answer Array data structure
+Cpp implementation :: std::array<T, N,////>
+
+Note : 1) An Array OF SIZE N WHEN DECLARED , IMMEDIATLY reverseS SPACE FOR N ITEMS.
+THIS MEANS , N DEFAULT CONSTRUCTIONS WILL HAPPEN AT THE TIME OF DECLARATION
+
+--> std::array<Employee ,3> // defaul cons must be on 
+    std::array<Employee*,3> // we are making copy of pointer , so default cons can be deleted
+
+option 2: store object in dynamycally resizable container which can be useed like array with reservation for elements or by pushing when required
+and resizing if necessary
+
+Aswer : Vector arrangement
+CPP implementation : std::Vector <T,//////>  ,////->custom allocater
+
+BEnefits : 1) you can resize the container during the runtime of the program
+           2) You can access elements via index randomly!
+
+    Note-> 1) If you add elements beyond capacity , Vector has to readjust.sometimes vector cannot expand to its boundry.
+            In such cases , a complete shift of data happens
+           
+Option 3: I would like to data anyhwere in ram as long as I can fetch it when I want it. Data items should be "linked"  to each other.
+//use when you are going to write more than read 
+Answer linked list 
+CPP implementation : std::forward_list : (singly linked list)
+                     std::list(doubly linked list)
+
+
+MAP-> uses hash function(maths formula) to generate hash value that used to get value in O(1).
+
+[ 101 | "Rohan" | 87000.0f | "Devloper" ]
+
+[ 102 | "Ajay" | 7000.0f | "Tester" ]
+
+
+Tag                 Data
+[ 809 ] ->   [ 103 | "Rohan" | 77000.0f | "Trainer" ] row [0]
+[ 809 ] ->   [ 103 | "Rohan" | 77000.0f | "Trainer" ] row [1]
+[ 809 ] ->   [ 103 | "Rohan" | 77000.0f | "Trainer" ] row [2]
+[ 809 ] ->   [ 103 | "Rohan" | 77000.0f | "Trainer" ] row [3]
+[ 809 ] ->   [ 103 | "Rohan" | 77000.0f | "Trainer" ] row [4]
+[ 809 ] ->   [ 103 | "Rohan" | 77000.0f | "Trainer" ] row [5]
+[ 809 ] ->   [ 103 | "Rohan" | 77000.0f | "Trainer" ] row [6]
+[ 809 ] ->   [ 103 | "Rohan" | 77000.0f | "Trainer" ] row [7]
+[ 809 ] ->   [ 103 | "Rohan" | 77000.0f | "Trainer" ] row [8]
+
+
+
+
+//infinite data 

@@ -1,0 +1,5 @@
+/*move constructor 
+smart pointer
+dynamiccast*/
+
+dynamic method dispatch( it happen after late binding)

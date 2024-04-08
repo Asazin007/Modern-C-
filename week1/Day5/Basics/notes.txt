@@ -1,0 +1,88 @@
+# encapsulation: Hide the internal representation of the obj of any party or entitiy or line outsode the class. You can use data binding to this by simply proving member function as layer between data and outside the world. 
+
+
+# data Binding: THe concept of Binding member functions with data member
+(if a fun is in the class it atleast use one data member , it binds with that data member)
+
+
+#Abstraction: Hiding  implementation details of a behavior (function) and tell the simpler version/implementaion
+-it allows you to change implementaion by (reimplement a function by overrding)
+-it tells simpler implementaion to user
+-  By using abstraction we can talk in "Abstract"(loose logic) term while explaining behavior 
+
+    Dynamic method Dispatch:
+    ( it happen after late binding): helps to decides correct fuction to call during runtime, it uses the concept of runtime polymorphism
+
+
+ex:
+/*
+class A{
+....
+....//vptr* hidden
+public:
+virtual void Display(){
+      std::cout<< "A display\n";
+
+}
+void Test(){
+      std::cout<<"test is called\n";
+}
+
+      
+};
+
+class B :public class A{
+      ....
+      public: 
+      void Display() override{
+            std::
+      }
+      void Test(){
+            std::cout<<"B test called\n";
+      }
+}
+Rule 1: for a class to contains at least 1 virtual method 
+A virtual table is created in memory.
+this table has add for the virtual method function
+
+class A Vtable
+[A:::Display()::0X10045H]
+0X777H
+|
+|
+vptr*
+Rule 2) if a class inherits from a parent class that also contains a vtable , the child will also implement its own vtable
+
+A* ptr = new B();
+ptr-> Display();
+//step1: verify where is display()
+   -go to class whose type is ptr's type
+   -go to a class. verify whether this function is at least declared in class
+      2: verify if the method is non-virtual. if yes call the function , lhs has priority
+      3: if the function is virtual, noe find the type of rhs(obj type). find the vtable for the object and call function based on ENTITY IN Vtable, parent vtable has a pointer to child vtable has traces to latest version of fuction
+
+
+
+
+
+
+-----------------------------------------------------------Marathon tips-------------------
+1) read the problem statement twice at least before doing it.
+
+2) compile program only when it is fully completed!
+
+3) only work on indivisual only,
+
+4)Always draw a diagram
+
+5)spend more time on desing the function than implementing it
+--------------------------------------------------------------
+
+Are we going to create objs of multiple child classess and strore them together in the same container
+      -if yes, we need upcasting.
+      -Base clas ,ust be virtual
+      -destructor must be marked as virtual
+Do we need to make the base class abstract / do we need to prevent instantiation(object creation of base)?
+      -Make sure at least 1 method in the the parent is marked as pure virtual.
+I'm not sure if member will be overridden or may be in future
+      -mark all such method as virtual 
